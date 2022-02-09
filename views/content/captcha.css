@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f2f4f6;
+  overflow: hidden;
+  user-select: none;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+.heading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20vh;
+  text-align: center;
+}
+.heading > h1 {
+  color: #0f62fe;
+}
+input#Captcha {
+  user-select: none;
+  pointer-events: none;
+}
+input#Captcha,
+input#txtInput {
+  font-size: 18px;
+  padding: 10px 20px;
+  outline: 0;
+  border: 1px solid #0f62fe;
+  width: 100%;
+}
+button {
+  background-color: #0f62fe;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 30px 10px 10px;
+  display: block;
+  transition: background-color 0.5s;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  outline: 0;
+}
+.captcha_output,
+.fillcaptcha {
+  width: 100%;
+}
