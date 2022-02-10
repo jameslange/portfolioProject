@@ -1,23 +1,21 @@
 <!-- HEADER -->
-<header role="banner" class="position-absolute">
-  <!-- Top Navigation -->
-  <nav class="background-transparent background-transparent-hightlight full-width sticky">
-    <div class="s-12 l-2">
-      <a href="/" class="logo">
-        <!-- Logo White Version -->
-        <img class="logo-white" src="img/logo.png" alt="" />
-        <!-- Logo Dark Version -->
-        <img class="logo-dark" src="img/logo-dark.png" alt="" />
-      </a>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">James Lange</a>
     </div>
-    <div class="top-nav s-12 l-10">
-      <p class="nav-text"></p>
-      <ul class="right chevron">
-        <li><a href="/" class="<%=page === 'index' ? 'active' : '' %>">Home</a></li>
-        <li><a href="about" class="<%=page === 'about' ? 'active' : '' %>">About</a></li>
-        <li><a href="gallery" class="<%=page === 'gallery' ? 'active' : '' %>">Gallery</a></li>
-        <li><a href="contact" class="<%=page === 'contact' ? 'active' : '' %>">Contact</a></li>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="<%=page === 'index' ? 'active' : '' %>"><a href="/">Home</a></li>
+        <li class="<%=page === 'about' ? 'active' : '' %>"><a href="about">About</a></li>
+        <li class="<%=page === 'gallery' ? 'active' : '' %>"><a href="gallery">Gallery</a></li>
+        <li class="<%=page === 'contact' ? 'active' : '' %>"><a href="contact">Contact</a></li>
       </ul>
     </div>
-  </nav>
-</header>
+  </div>
+</div>

@@ -1,180 +1,147 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eleganter - New Amazing HTML5 Template</title>
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/icons.css" />
-    <link rel="stylesheet" href="css/responsee.css" />
-    <link rel="stylesheet" href="owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="owl-carousel/owl.theme.css" />
-    <link rel="stylesheet" href="css/template-style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <body class="size-1140">
+    <title>Neuron Template - Gallery</title>
+    <!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- PRE LOADER -->
+
+    <div class="preloader">
+      <div class="sk-spinner sk-spinner-wordpress">
+        <span class="sk-inner-circle"></span>
+      </div>
+    </div>
+
+    <!-- Navigation section  -->
+
     <%- include('../partials/nav', {page:'gallery'})%>
 
-    <!-- MAIN -->
-    <main role="main">
-      <!-- Content -->
-      <article>
-        <header class="section background-dark">
-          <div class="line">
-            <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Gallery</h1>
-            <p class="margin-bottom-0 text-size-16">
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-              eu feugiat nulla facilisis.<br />
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
-            </p>
-          </div>
-        </header>
+    <!-- Home Section -->
 
-        <div class="section background-white">
-          <div class="line">
-            <div class="margin">
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-02.jpg" alt="" title="Portfolio Image 1" />
-                </div>
+    <section id="home" class="main-gallery parallax-section">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h1>Image Gallery</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+
+    <section id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10 col-sm-12">
+            <h2>Beautiful Images with Magnific Popup..</h2>
+            <p>
+              Aliquam blandit velit nisi, sed fringilla felis lacinia sed. Integer vitae porta felis. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tristique
+              lacus. Suspendisse ut tortor vitae risus lacinia tristique. Aliquam sed consectetur libero.
+            </p>
+            <p>
+              Morbi tellus dolor, porta dignissim enim sit amet, dapibus sagittis erat. In blandit elit sit amet dui
+              aliquet congue nec vel quam. Integer id tristique libero.
+            </p>
+            <span></span>
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image1.jpg" class="image-popup">
+                  <img src="images/gallery-image1.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 2" />
-                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image2.jpg" class="image-popup">
+                  <img src="images/gallery-image2.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-08.jpg" alt="" title="Portfolio Image 3" />
-                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image3.jpg" class="image-popup">
+                  <img src="images/gallery-image3.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-05.jpg" alt="" title="Portfolio Image 4" />
-                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image4.jpg" class="image-popup">
+                  <img src="images/gallery-image4.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-06.jpg" alt="" title="Portfolio Image 5" />
-                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image5.jpg" class="image-popup">
+                  <img src="images/gallery-image5.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-11.jpg" alt="" title="Portfolio Image 6" />
-                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="gallery-thumb">
+                <a href="images/gallery-image6.jpg" class="image-popup">
+                  <img src="images/gallery-image6.jpg" class="img-responsive" alt="Gallery Image" />
+                </a>
               </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-12.jpg" alt="" title="Portfolio Image 7" />
-                </div>
-              </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-07.jpg" alt="" title="Portfolio Image 8" />
-                </div>
-              </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-01.jpg" alt="" title="Portfolio Image 9" />
-                </div>
-              </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-14.jpg" alt="" title="Portfolio Image 10" />
-                </div>
-              </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-03.jpg" alt="" title="Portfolio Image 11" />
-                </div>
-              </div>
-              <div class="s-12 m-6 l-4">
-                <div class="image-with-hover-overlay image-hover-zoom margin-bottom">
-                  <div class="image-hover-overlay background-primary">
-                    <div class="image-hover-overlay-content text-center padding-2x">
-                      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-                    </div>
-                  </div>
-                  <img src="img/portfolio/thumb-04.jpg" alt="" title="Portfolio Image 12" />
-                </div>
-              </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+              <p>
+                Aliquam blandit velit nisi, sed fringilla felis lacinia sed. Integer vitae porta felis. Class aptent
+                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tristique
+                lacus.
+              </p>
             </div>
           </div>
         </div>
-      </article>
-    </main>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
+    <!-- Footer Section -->
+
     <%- include('../partials/footer')%>
-    <script type="text/javascript" src="js/responsee.js"></script>
-    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/template-scripts.js"></script>
+
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- SCRIPTS -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/4210f2aac8.js" crossorigin="anonymous"></script>
   </body>
 </html>

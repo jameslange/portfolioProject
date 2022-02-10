@@ -1,4 +1,4 @@
-const sgMail = require("@sendgrid/mail");
+//const sgMail = require("@sendgrid/mail");
 //sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 require("dotenv").config();
 
@@ -8,35 +8,60 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "jimtwelve6@gmail.com",
-    pass: "J!al10427283",
+    user: process.env.AUTH_USER,
+    pass: process.env.AUTH_PASS,
   },
 });
 
-function sendEmail(emailData) {
-  return new Promise((resolve, reject) => {
-    console.log(emailData);
-    console.log(emailData);
-    const mailOptions = {
-      from: "jimtwelve6@gmail.com",
-      to: "jaimeslange@gmail.com",
-      subject: "Invoices due",
-      html: `
+// function sendEmail(emailData) {
+//   return new Promise((resolve, reject) => {
+//     console.log(emailData);
+//     console.log(emailData);
+//     const mailOptions = {
+//       from: process.env.AUTH_USER,
+//       to: process.env.CONTACT_EMAIL,
+//       subject: `${emailData.subject}`,
+//       html: `
+//                   <h1>email from contact page in your website</h1>
+//                  <p><strong>Name:</strong> ${emailData.name}</p>
+//                   <p><strong>email:</strong> ${emailData.email}</p>
+//                   <p><strong>department:</strong> ${emailData.subject}</p>
+//                   <p>${emailData.message}</p>   `,
+//     };
+//     transporter.sendMail(mailOptions, (error, info) => {
+//       if (error) {
+//         console.log(error);
+//         reject(error);
+//       } else {
+//         console.log("email sent" + info.response);
+//         resolve(info);
+//       }
+//     });
+//   });
+// }
+
+function sendEmail(emailData, cb) {
+  console.log(emailData);
+  console.log(emailData);
+  const mailOptions = {
+    from: process.env.AUTH_USER,
+    to: process.env.CONTACT_EMAIL,
+    subject: `${emailData.subject}`,
+    html: `
                   <h1>email from contact page in your website</h1>
                  <p><strong>Name:</strong> ${emailData.name}</p>
                   <p><strong>email:</strong> ${emailData.email}</p>
                   <p><strong>department:</strong> ${emailData.subject}</p>
                   <p>${emailData.message}</p>   `,
-    };
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log("email sent" + info.response);
-        resolve(info);
-      }
-    });
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      cb({ result: "error" });
+    } else {
+      console.log("email sent" + info.response);
+      cb({ result: "success" });
+    }
   });
 }
 
