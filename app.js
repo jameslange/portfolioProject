@@ -18,7 +18,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views/content"));
 app.use(express.static(path.join(__dirname, "/public")));
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 //app.use("/bootstrap", express.static(path.join(__dirname, "/node_modules/bootstrap")));
 //app.use("/jquery", express.static(path.join(__dirname, "/node_modules/jquery")));
 
