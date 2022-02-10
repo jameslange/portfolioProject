@@ -12,6 +12,7 @@ route.get("/", (req, res) => {
 });
 
 route.post("/", async (req, res) => {
+  console.log(req.body);
   const key = process.env.CAPTCHA_SECRET_KEY;
   const googleResponse = await fetch(
     "https://www.google.com/recaptcha/api/siteverify?secret=" + key + "&response=" + req.body.recaptchaResponse,

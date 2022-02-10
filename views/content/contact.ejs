@@ -83,7 +83,7 @@ http://www.tooplate.com/view/2085-neuron
                   placeholder="Message"
                 ></textarea>
               </div>
-              <div class="g-recaptcha" data-sitekey="6Ldkzm0eAAAAABRN_INcMgQZeTGO0HO0MXIOIYmq"></div>
+              <div class="g-recaptcha" data-sitekey="6LdeB24eAAAAAKNJLgs8Ybx1TMy5JSVu7E_lW8hj"></div>
               <div class="col-md-3 col-sm-6">
                 <input name="submit" type="submit" class="form-control" id="submit-button" value="Send" />
               </div>
@@ -112,9 +112,9 @@ http://www.tooplate.com/view/2085-neuron
       //   $("body").addClass("loaded");
       // });
 
-      const onloadCallback = () => {
-        alert("captcha is ready");
-      };
+      // const onloadCallback = () => {
+      //   alert("captcha is ready");
+      // };
       const nameInput = document.querySelector("#name-input");
       const emailInput = document.querySelector("#email-input");
       const subjectInput = document.querySelector("#subject-input");
@@ -123,25 +123,23 @@ http://www.tooplate.com/view/2085-neuron
       const myRecaptcha = document.querySelector(".g-recaptcha");
 
       const captchaWidget = grecaptcha.render(myRecaptcha, {
-        sitekey: "6Ldkzm0eAAAAABRN_INcMgQZeTGO0HO0MXIOIYmq",
+        sitekey: "6LdeB24eAAAAAKNJLgs8Ybx1TMy5JSVu7E_lW8hj",
         theme: "light",
       });
       // add click event to submit button
       submitButton.addEventListener("click", async (e) => {
         // tp prevent the page to be reloaded on button click
         e.preventDefault();
-        const recaptchaResponse = grecaptcha.getResponse(captchaWidget);
-        console.log(recaptchaResponse);
+        const reCaptchaResponse = grecaptcha.getResponse(captchaWidget);
+        console.log(reCaptchaResponse);
         const data = {
           name: nameInput.value,
           email: emailInput.value,
           subject: subjectInput.value,
           message: messageInput.value,
-          recaptchaResponse: recaptchaResponse,
+          recaptchaResponse: reCaptchaResponse,
         };
-
-        // send data using GET request
-        // www.ff.com/?name=ahmad&email=sss@ff.com&
+        console.log("hiiiiiiiiiiiiiiiiiiiiiiiiii", data.recaptchaResponse);
         try {
           const response = await fetch("/contact", {
             method: "POST",
@@ -150,7 +148,7 @@ http://www.tooplate.com/view/2085-neuron
             },
             body: JSON.stringify(data),
           });
-          console.log(data);
+          console.log("hiiiiiiiiiiiiiiiiiiiiiiiiii", data.recaptchaResponse);
           // console.log(response);
           // console.log(response.body);
           const answer = await response.json();
