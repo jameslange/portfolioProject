@@ -301,12 +301,11 @@ a:focus {
 }
 
 .main-gallery {
-  background: url("../images/myPics/fog.jpg") no-repeat;
-  background-position: center;
+  background: url("../images/myPics/volcanopano2.jpg") no-repeat;
 }
 
 .main-contact {
-  background: url("../images/contact-bg.jpg") no-repeat;
+  background: url("../images/myPics/tree.jpg") no-repeat;
 }
 
 #particles-js {

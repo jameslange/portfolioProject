@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-    <title>Neuron Template - Contact</title>
+    <title>Contact</title>
     <!--
 
 Template 2085 Neuron
@@ -41,13 +41,7 @@ http://www.tooplate.com/view/2085-neuron
 
     <section id="home" class="main-contact parallax-section">
       <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <h1>Contact Us</h1>
-          </div>
-        </div>
-      </div>
+      <div class="container"></div>
     </section>
 
     <!-- Contact Section -->
@@ -57,12 +51,7 @@ http://www.tooplate.com/view/2085-neuron
         <div class="row">
           <div class="col-md-offset-1 col-md-10 col-sm-12">
             <h2>Say hello..</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.
-            </p>
+            <p>You can use the contact form below to get in touch with me. I look forward to hearing from you!</p>
 
             <form action="#" method="POST">
               <div class="col-md-4 col-sm-4">
@@ -83,8 +72,8 @@ http://www.tooplate.com/view/2085-neuron
                   placeholder="Message"
                 ></textarea>
               </div>
-              <div class="g-recaptcha" data-sitekey="6LdeB24eAAAAAKNJLgs8Ybx1TMy5JSVu7E_lW8hj"></div>
               <div class="col-md-3 col-sm-6">
+                <div class="g-recaptcha" data-sitekey="6LdeB24eAAAAAKNJLgs8Ybx1TMy5JSVu7E_lW8hj"></div>
                 <input name="submit" type="submit" class="form-control" id="submit-button" value="Send" />
               </div>
             </form>
@@ -139,7 +128,7 @@ http://www.tooplate.com/view/2085-neuron
           message: messageInput.value,
           recaptchaResponse: reCaptchaResponse,
         };
-        console.log("hiiiiiiiiiiiiiiiiiiiiiiiiii", data.recaptchaResponse);
+
         try {
           const response = await fetch("/contact", {
             method: "POST",
@@ -148,12 +137,12 @@ http://www.tooplate.com/view/2085-neuron
             },
             body: JSON.stringify(data),
           });
-          console.log("hiiiiiiiiiiiiiiiiiiiiiiiiii", data.recaptchaResponse);
+
           // console.log(response);
           // console.log(response.body);
           const answer = await response.json();
           // deal with the answer
-          console.log(answer);
+
           if (answer.result === "success") {
             alert("The email was sent successfully");
           } else {
